@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlokBlok | Premium Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1 id="game-title">BLOKBLOK</h1>
+            <div id="score-container">
+                <div class="score-card">
+                    <span class="label">SKOR</span>
+                    <span id="current-score">0</span>
+                </div>
+                <div class="score-card high-score">
+                    <span class="label">EN YÜKSEK</span>
+                    <span id="high-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div id="grid-container">
+                <!-- 12x12 grid will be generated here -->
+                <div id="grid-canvas"></div>
+            </div>
+            
+            <div id="blocks-spawn">
+                <div class="block-slot" id="slot-0"></div>
+                <div class="block-slot" id="slot-1"></div>
+                <div class="block-slot" id="slot-2"></div>
+            </div>
+        </main>
+
+        <div id="game-over-overlay" class="hidden">
+            <div class="overlay-content">
+                <h2>OYUN BİTTİ</h2>
+                <div class="final-scores">
+                    <p>Skorunuz: <span id="final-score">0</span></p>
+                    <p id="high-score-msg" class="hidden">Yeni En Yüksek Skor!</p>
+                </div>
+                <button id="restart-btn">TEKRAR OYNA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
